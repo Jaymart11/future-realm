@@ -1,0 +1,210 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  /* padding: 0; */
+}
+body {
+  font-family: "Orbitron", sans-serif;
+  background-color: #0a0a23;
+  color: white;
+  line-height: 1.6;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: #0f0f2b;
+  height: 10vh;
+}
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+}
+.btn-register {
+  padding: 10px 20px;
+  background: #4f46e5;
+  border-radius: 8px;
+  color: white;
+  text-decoration: none;
+}
+
+.btn-register:hover {
+  background: #3b3ba0;
+}
+
+.burger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.burger .bar {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  transition: 0.3s;
+}
+
+.hero {
+  background: url("./img/nat-dA0-qxdbyyY-unsplash.jpg") center/cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  padding: 100px 20px;
+  height: 90vh;
+}
+.hero .btn-register {
+  width: 170px;
+}
+.hero h1 {
+  font-size: 5rem;
+  margin-bottom: 10px;
+}
+.hero p {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+.section {
+  padding: 40px 20px;
+  max-width: 80vw;
+  margin: auto;
+}
+.card {
+  background-color: #1c1c3a;
+  border-radius: 10px;
+  padding: 15px;
+  margin: 10px;
+}
+
+.highlights {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.highlights .card,
+.speakers .speaker {
+  background-color: transparent;
+  border: #4f46e5 1px solid;
+}
+
+.games {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.games .game-logo img {
+  width: 100%;
+  height: 100%;
+}
+
+.speakers {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 2rem;
+  padding: 1rem;
+}
+
+.speakers .speaker img {
+  width: 100%;
+  height: 100%;
+}
+
+.pricing {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+.pricing .card {
+  border: #4f46e5 1px solid;
+}
+.pricing .card > * {
+  margin-bottom: 2rem;
+}
+
+.pricing .btn-register {
+  display: block;
+  text-align: center;
+}
+
+.pricing li {
+  list-style-type: none;
+  margin-bottom: 1rem;
+  list-style-type: "✓   ";
+}
+
+.pricing li::marker {
+  color: green;
+  font-weight: 900;
+}
+.countdown {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  font-size: 1.5rem;
+}
+
+.countdown div {
+  width: 100%;
+  text-align: center;
+}
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #0f0f2b;
+}
+@media (max-width: 768px) {
+  .pricing .card {
+    width: 90%;
+    margin: 10px auto;
+  }
+  .highlights {
+    grid-template-columns: 1fr; /* 2 columns on wider screens */
+  }
+
+  .section {
+    max-width: 100vw;
+  }
+
+  nav {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 10vh;
+    left: 0;
+    width: 100%;
+    background-color: #0f0f2b;
+    padding: 20px;
+    z-index: 1000;
+  }
+
+  nav.active {
+    display: flex;
+  }
+
+  nav a {
+    margin: 10px 0;
+  }
+
+  .burger {
+    display: flex;
+  }
+
+  /* Burger animation when active */
+  .burger.active .bar:nth-child(1) {
+    transform: rotate(40deg) translate(5px, 5px);
+  }
+
+  .burger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .burger.active .bar:nth-child(3) {
+    transform: rotate(-40deg) translate(8px, -5px);
+  }
+}
