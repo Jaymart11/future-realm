@@ -50,6 +50,7 @@ nav a {
 
 .hero {
   background: url("./img/nat-dA0-qxdbyyY-unsplash.jpg") center/cover no-repeat;
+  background-attachment: fixed;
   display: flex;
   flex-direction: column;
   justify-content: end;
